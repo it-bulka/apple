@@ -1,9 +1,12 @@
+import { Navbar } from "./components/Navbar.jsx";
 import './App.css'
 
 function App() {
 
   return (
-    <>Hello</>
+    <main className="bg-black">
+      <Navbar/>
+    </main>
   )
 }
 
