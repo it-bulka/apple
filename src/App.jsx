@@ -1,4 +1,8 @@
-import { Navbar } from "./components/Navbar.jsx";
+import {
+  Navbar,
+  Hero,
+  Highlights
+} from "src/components";
 import './App.css'
 
 function App() {
@@ -6,6 +10,8 @@ function App() {
   return (
     <main className="bg-black">
       <Navbar/>
+      <Hero />
+      <Highlights />
     </main>
   )
 }
