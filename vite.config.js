@@ -9,4 +9,10 @@ export default defineConfig({
       src: "/src",
     },
   },
+  build: {
+    rollupOptions: {
+      input: '/src/main.jsx', // Ensure this matches your main entry point
+    },
+  },
+  assetsInclude: ['**/*.glb'],
 })

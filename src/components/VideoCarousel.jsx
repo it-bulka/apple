@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 import { hightlightsSlides } from "src/constants/index.js";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -16,7 +16,7 @@ const videoHandler = {
   LAST: 'video-last'
 
 }
-export const VideoCarousel = () => {
+export const VideoCarousel = memo(() => {
   const videoRef = useRef([]);
   const videoIndecatorWrapperRef = useRef([]);
   const videoIndecatorRef = useRef([]);
@@ -218,4 +218,4 @@ export const VideoCarousel = () => {
       </div>
     </>
   );
-};
+})

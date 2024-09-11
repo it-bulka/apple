@@ -1,7 +1,8 @@
 import {
   Navbar,
   Hero,
-  Highlights
+  Highlights,
+  Model
 } from "src/components";
 import './App.css'
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar/>
       <Hero />
       <Highlights />
+      <Model />
     </main>
   )
 }
