@@ -2,7 +2,8 @@ import {
   Navbar,
   Hero,
   Highlights,
-  Model
+  Model,
+  Feature
 } from "src/components";
 import './App.css'
 
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Highlights />
       <Model />
+      <Feature />
     </main>
   )
 }
