@@ -85,6 +85,10 @@ export const VideoCarousel = memo(() => {
             gsap.to(indecators[videoId], {
               backgroundColor: '#afafaf'
             })
+
+            if (isLastVideo) {
+              anim.kill();
+            }
           }
         }
       })
@@ -103,11 +107,6 @@ export const VideoCarousel = memo(() => {
         gsap.ticker.remove(animUpdate)
       }
     }
-    // Clean up
-    /*return () => {
-      gsap.ticker.remove(animUpdate);
-      anim?.kill();
-    };*/
   }, [videoId, startPlay])
 
   useGSAP(() => {
@@ -140,7 +139,10 @@ export const VideoCarousel = memo(() => {
         setVideo(prev => ({ ...prev, isLastVideo: false, videoId: 0 }))
         break;
       case videoHandler.PLAY:
-        setVideo(prev => ({ ...prev, isPlaying: !prev.isPlaying }))
+        setVideo(prev => ({ ...prev, isPlaying: true }))
+        break;
+      case videoHandler.PAUSE:
+        setVideo(prev => ({ ...prev, isPlaying: false }))
         break;
       default:
         break;
