@@ -3,7 +3,9 @@ import {
   Hero,
   Highlights,
   Model,
-  Feature
+  Feature,
+  HowItWork,
+  Footer
 } from "src/components";
 import './App.css'
 
@@ -16,6 +18,8 @@ function App() {
       <Highlights />
       <Model />
       <Feature />
+      <HowItWork />
+      <Footer />
     </main>
   )
 }
